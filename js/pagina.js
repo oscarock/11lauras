@@ -34,11 +34,26 @@ $(document).ready(function() {
 		$('#ver_mas').css('display','block');
 		$('#ver_menos').css('display','none');
 	});
+	$('#ver_mas_2').click(function(){
+		$('#ver_mas_obras').fadeIn(1000);
+		$('#ver_mas_2').css('display','none');
+		$('#ver_menos_2').css('display','block');
+	});
+	$('#ver_menos_2').click(function(){
+		$('#ver_mas_obras').fadeOut(1000);
+		$('#ver_mas_2').css('display','block');
+		$('#ver_menos_2').css('display','none');
+	});
 	/*Fin Efecto Ver Mas*/
 
 	/*Acciones Menu*/
 	$('#acerca').click(function(){
 		$('#acerca_de_mi').fadeIn(2000);
+		$('#obras_realizadas').fadeOut('fast');
+	});
+	$('#obras').click(function(){
+		$('#acerca_de_mi').fadeOut('fast');
+		$('#obras_realizadas').fadeIn(2000);
 	});
 	/*Fin Acciones Menu*/
 });
